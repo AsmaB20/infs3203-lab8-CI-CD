@@ -4,7 +4,6 @@ import requests
 MODEL = "gemini-2.5-flash-lite"
 API_ENDPOINT = f"https://aiplatform.googleapis.com/v1/publishers/google/models/{MODEL}:generateContent"
 
-
 def _call(prompt: str) -> str:
     api_key = os.environ["GEMINI_KEY"]
     url = f"{API_ENDPOINT}?key={api_key}"
